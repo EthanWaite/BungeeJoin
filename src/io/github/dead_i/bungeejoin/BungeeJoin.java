@@ -39,7 +39,6 @@ public class BungeeJoin extends Plugin implements Listener {
                 configFile.createNewFile();
                 ByteStreams.copy(getResourceAsStream("config.yml"), new FileOutputStream(configFile));
                 getLogger().warning("A new configuration file has been created. Please edit config.yml and run /reloadjoin.");
-                return;
             }
             config = ConfigurationProvider.getProvider(YamlConfiguration.class).load(configFile);
         } catch (IOException e) {
